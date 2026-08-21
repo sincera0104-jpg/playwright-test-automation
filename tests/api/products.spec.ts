@@ -10,5 +10,8 @@ test('GET - 상품 목록 조회', async ({ request }) => {
   
   expect(response.status()).toBe(200);
   expect(Array.isArray(body)).toBeTruthy();
+  const firstProduct = body[0];
+  expect(firstProduct).toHaveProperty("title")
+  expect(firstProduct).toHaveProperty("price")
 
 });
