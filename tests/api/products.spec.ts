@@ -13,5 +13,6 @@ test('GET - 상품 목록 조회', async ({ request }) => {
   const firstProduct = body[0];
   expect(firstProduct).toHaveProperty("title")
   expect(firstProduct).toHaveProperty("price")
+  expect(firstProduct).toHaveProperty("category")
 
 });
